@@ -14,7 +14,7 @@ export const Route = createRootRoute({
       {
         name: "description",
         content:
-          "A local macOS design workspace for your ideas and your AI agents. Design on an editable canvas, work with Claude and Codex, and keep your documents yours.",
+          "An always-free macOS workspace for design and code. Shape your canvas, work with Claude or Codex in Git worktrees, review changes, and keep your documents local.",
       },
       { name: "theme-color", content: "#f6f5f1" },
     ],

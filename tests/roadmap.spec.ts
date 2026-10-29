@@ -11,6 +11,12 @@ test("roadmap is server-rendered with honest status and free-app commitment", as
   expect(html).toContain("no committed delivery dates");
   expect(html).toContain("https://wonder.design/roadmap");
   expect(html).toContain("Live authenticated import is unverified");
+  expect(html).toContain("Design and Code workspaces");
+  expect(html).toContain("Rewind and second opinions");
+  expect(html).toContain(
+    "MCP token tools do not yet support the new variable types",
+  );
+  expect(html).not.toContain("still needs a real model turn");
 });
 
 test("homepage navigation, status filters, and return navigation work", async ({
@@ -22,11 +28,11 @@ test("homepage navigation, status filters, and return navigation work", async ({
   await page.getByRole("link", { name: "Explore the roadmap" }).click();
   await expect(page).toHaveURL(/\/roadmap$/);
   await expect(page).toHaveTitle("Roadmap — Verynize");
-  await expect(page.locator(".roadmap-card")).toHaveCount(27);
+  await expect(page.locator(".roadmap-card")).toHaveCount(33);
   await page
     .getByRole("button", { name: "Available locally", exact: true })
     .click();
-  await expect(page.locator(".roadmap-card")).toHaveCount(10);
+  await expect(page.locator(".roadmap-card")).toHaveCount(13);
   await expect(
     page.getByRole("heading", { name: "Figma imports" }),
   ).toHaveCount(0);
@@ -41,7 +47,7 @@ test("homepage navigation, status filters, and return navigation work", async ({
   ).toBeVisible();
   await expect(page.locator(".roadmap-card .status-partial")).toHaveCount(0);
   await page.getByRole("button", { name: "All directions" }).click();
-  await expect(page.locator(".roadmap-card")).toHaveCount(27);
+  await expect(page.locator(".roadmap-card")).toHaveCount(33);
   await page.getByRole("link", { name: "Back to the workspace" }).click();
   await expect(page).toHaveURL("/");
   expect(errors).toEqual([]);

@@ -20,11 +20,11 @@ npx playwright install chromium
 npm test
 ```
 
-Tests cover SSR content, perspective switching, FAQ expansion, mobile navigation, clipboard copying, and layout overflow.
+Tests cover SSR content, perspective switching, FAQ expansion, mobile navigation, clipboard copying, roadmap navigation/filtering, and layout overflow. These checks validate the marketing site, not the product runtime.
 
 ## Content sources
 
-Copy is based on `../verynize-product/README.md` and `../verynize-product/docs/implementation-status.md` (2026-10-28). The product workspace is an original CSS illustration, explicitly labeled as illustrative. It is not a screenshot or evidence of a successful agent task.
+Copy is based on product **0.8.0** at commit `404c83bc9476665b6c88f9cd7405d6cbd8101276`, including `../verynize-product/README.md`, the acceptance notes updated 2026-10-29, and current code/test evidence. See [the product evidence ledger](docs/product-evidence.md) for supported claims, source conflicts, and validation limits. The product workspace is an original CSS illustration, explicitly labeled as illustrative. It is not a screenshot or evidence of a successful agent task.
 
 The primary CTA opens source-checkout instructions. No public download, paid plan prices, signup, hosted collaboration, or production service is implied. Review the FAQ alongside the implementation status before changing claims. Product source is not bundled into the website. Fonts are bundled locally with their license.
 
@@ -34,10 +34,12 @@ The product owner confirmed that the Verynize app will always be free. Any futur
 
 ## Repository
 
-This is a Git submodule of `verynize`. Its temporary origin is the sibling bare repository `../verynize-marketing.git` relative to the parent repository. Commit here first, push to the local origin, then commit the updated submodule pointer in the parent.
+This is the marketing Git submodule of the Verynize workspace. Its configured origin is `https://github.com/AdamAbd/verynize-marketing.git`. Commit changes here before updating the submodule pointer in the parent repository. Publishing the Git repository and deploying the website are separate actions.
 
 ## Roadmap
 
-`/roadmap` covers the 27 feature directions on [Wonder’s roadmap](https://wonder.design/roadmap), read on 2026-10-29 with Agent Reach/Jina Reader. The implementation and copy are original. Statuses come from our product acceptance notes dated 2026-10-28, not the vendor’s shipped labels.
+`/roadmap` starts from the feature coverage in [Wonder’s roadmap](https://wonder.design/roadmap), read on 2026-10-29 with Agent Reach/Jina Reader, and tracks Verynize’s own capabilities. The implementation and copy are original. Statuses come from our product acceptance notes dated 2026-10-29 and the product evidence ledger, not the vendor’s shipped labels.
+
+The current inventory has 33 directions: 13 Available locally, 11 Partial, and 9 Exploring.
 
 Edit `src/data/roadmap.ts` to maintain the feature inventory. Available locally means exercised within stated limits; Partial means bounded implementation or pending validation; Exploring is a parity direction with no delivery commitment. Do not promote an item without new product evidence. Preserve the always-free app and self-hosting commitment.

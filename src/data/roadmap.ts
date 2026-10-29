@@ -1,4 +1,5 @@
-// Evidence: product/docs/implementation-status.md, updated 2026-10-28.
+// Evidence: verynize-product/docs/implementation-status.md, updated 2026-10-29.
+// Includes the accepted Code workspace, runtime, shell, and inspector updates.
 // Exploring means a parity direction, not an approved delivery schedule.
 export const statuses = {
   available: {
@@ -62,7 +63,7 @@ export const roadmap: RoadmapGroup[] = [
         title: "Scale and stacking",
         status: "available",
         description:
-          "Resize proportionally and control layer order, rotation, opacity, and clipping.",
+          "Resize proportionally and control stacking, opacity, and clipping. Flip layers horizontally or vertically and rotate them in 90° steps.",
       },
       {
         title: "Guides and measurements",
@@ -74,7 +75,19 @@ export const roadmap: RoadmapGroup[] = [
         title: "Design variables",
         status: "available",
         description:
-          "Create color variables and import CSS color tokens into your document.",
+          "Create color, dimension, number, font-family, and font-weight variables with property bindings and CSS export. Import CSS color tokens; MCP token tools do not yet support the new variable types.",
+      },
+      {
+        title: "Layer organization",
+        status: "available",
+        description:
+          "Drag layers to reorder them or move them into and out of frames, including multiple selections. Locked layers are respected and each move is one undo step.",
+      },
+      {
+        title: "Color, type, and artwork export",
+        status: "available",
+        description:
+          "Pick colors with alpha, HEX, RGB, HSL, or OKLCH controls and an eyedropper. Choose installed or Fontsource fonts, then export artwork at 0.5×–4× or as PDF through a native save dialog.",
       },
       {
         title: "Figma imports",
@@ -102,10 +115,22 @@ export const roadmap: RoadmapGroup[] = [
     intro: "Move between the canvas, your files, and a running app.",
     items: [
       {
+        title: "Design and Code workspaces",
+        status: "available",
+        description:
+          "Switch from the canvas to a full-window Code workspace with repository chats, All/Changed file trees, a file editor, project memory, and a dev-server preview. The active project follows the selected chat.",
+      },
+      {
+        title: "Review and commit changes",
+        status: "partial",
+        description:
+          "Inspect file diffs, confirm discards, commit changes, and push without force from the Changes panel. Local Git workflows are tested; GitHub pull-request creation uses a test stub and is not live-verified.",
+      },
+      {
         title: "Design and code exchange",
         status: "partial",
         description:
-          "Supported HTML and Tailwind-style JSX can become editable nodes. Full stylesheet fidelity and general source-code round trips remain gaps.",
+          "Supported HTML and Tailwind-style JSX become editable nodes. An Implement selection in code prompt connects canvas context to an agent task. Full stylesheet fidelity and general source-code round trips remain gaps.",
       },
       {
         title: "Capture into editable layers",
@@ -117,13 +142,13 @@ export const roadmap: RoadmapGroup[] = [
         title: "Local app preview",
         status: "available",
         description:
-          "Inspect a running localhost app in responsive embedded viewports or a separate native window.",
+          "Detect, start, and stop a project dev server with a saved command. Inspect its localhost app in responsive embedded viewports or a separate native window.",
       },
       {
         title: "Git worktrees",
         status: "available",
         description:
-          "Create a real Git worktree from an existing repository to keep an experiment separate.",
+          "New chats in repositories with a commit get their own Git worktree and Verynize branch. Older chats and repositories without a commit can use the project root. Files, diffs, previews, and the agent follow the active chat.",
       },
       {
         title: "Icons on the canvas",
@@ -148,13 +173,25 @@ export const roadmap: RoadmapGroup[] = [
         title: "Claude and Codex alongside your work",
         status: "partial",
         description:
-          "Installed CLI tasks, selection context, streaming, queues, and stop controls are implemented. The newer integrated chat runtime still needs a real model turn; account flows and comprehensive history controls have remaining gaps.",
+          "Real turns through both the Claude Agent SDK and Codex app-server have passed, including streaming, usage, and MCP tool discovery. Queue, stop, context, and access controls are implemented; live account flows and some conversation controls remain unverified.",
       },
       {
         title: "Live and headless MCP",
         status: "available",
         description:
-          "Shared tools read and edit the open canvas with undo, or work on saved documents when the desktop app is closed.",
+          "The catalog contains 49 MCP tools, including 15 desktop-only shell tools. Design tools edit the live canvas with undo or saved files headlessly; screenshots and desktop shell actions require the running app.",
+      },
+      {
+        title: "Desktop tools for your agents",
+        status: "partial",
+        description:
+          "Fifteen desktop-only tools cover dev servers, preview interaction and capture, terminal commands, and editor actions. Execution respects approval and access controls; Codex main threads currently always request approval.",
+      },
+      {
+        title: "Rewind and second opinions",
+        status: "partial",
+        description:
+          "Rewind can fork a provider session at a kept turn, with a transcript fallback. A second opinion sends the latest answer and diff to the other provider read-only. Neither flow has been run live from inside the app.",
       },
       {
         title: "Shared rooms and presence",

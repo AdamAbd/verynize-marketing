@@ -35,7 +35,7 @@ function RoadmapPage() {
       </a>
       <header className="header roadmap-header">
         <Link className="brand" to="/" aria-label="Verynize home">
-          <span className="brand-mark">b.</span>verynize
+          <span className="brand-mark">v.</span>verynize
           <span className="alpha">LOCAL FIRST</span>
         </Link>
         <nav className="roadmap-nav" aria-label="Main navigation">
@@ -62,7 +62,7 @@ function RoadmapPage() {
             exploring next.
           </p>
           <div className="roadmap-date">
-            Implementation evidence: October 28, 2026 · Roadmap reviewed:
+            Implementation evidence: October 29, 2026 · Roadmap reviewed:
             October 29, 2026
           </div>
         </section>
@@ -137,8 +137,8 @@ function RoadmapPage() {
           <h2>The app stays free. Always.</h2>
           <p>
             Any future paid offerings are limited to optional cloud and AI
-            services. Self-hosting stays free of Verynize license fees;
-            your infrastructure and AI providers may charge for usage.
+            services. Self-hosting stays free of Verynize license fees; your
+            infrastructure and AI providers may charge for usage.
           </p>
           <a className="button primary" href="/#start">
             Start with your next idea <ArrowRight size={16} />
@@ -147,13 +147,12 @@ function RoadmapPage() {
         <aside className="roadmap-evidence">
           <h2>About this roadmap</h2>
           <p>
-            These are Verynize’s own implementation statuses. Available
-            locally means tested within the stated scope, not a hosted
-            production service. Exploring items have no committed delivery
-            dates.
+            These are Verynize’s own implementation statuses. Available locally
+            means tested within the stated scope, not a hosted production
+            service. Exploring items have no committed delivery dates.
           </p>
           <p>
-            Feature coverage is informed by the{" "}
+            Feature coverage began with the{" "}
             <a
               href="https://wonder.design/roadmap"
               target="_blank"
@@ -161,15 +160,15 @@ function RoadmapPage() {
             >
               Wonder roadmap <ArrowUpRight size={12} />
             </a>{" "}
-            and our implementation acceptance notes. Verynize is
-            independently authored; this page does not claim full Wonder parity
-            or affiliation.
+            and now tracks our canvas, Code workspace, agent runtime, and
+            implementation acceptance notes. Verynize is independently authored;
+            this page does not claim full Wonder parity or affiliation.
           </p>
         </aside>
       </main>
       <footer>
         <Link className="brand" to="/">
-          <span className="brand-mark">b.</span>verynize
+          <span className="brand-mark">v.</span>verynize
         </Link>
         <span>A little more possibility.</span>
         <Link to="/">

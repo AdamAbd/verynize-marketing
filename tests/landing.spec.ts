@@ -8,6 +8,12 @@ test("SSR includes meaningful content and product boundaries", async ({
   expect(html).toContain("Your canvas. Your agents.");
   expect(html).toContain("no notarized public installer");
   expect(html).toContain("not been deployed to production");
+  expect(html).toContain("New repository chats get their own Git worktree when the repository has a commit");
+  expect(html).toContain(
+    "One real reply-only turn has passed through each integrated runtime",
+  );
+  expect(html).not.toContain("still awaits a real model-turn validation");
+  expect(html).toContain("The app is free. Always.");
 });
 test("perspectives, FAQ, and source CTA work without browser errors", async ({
   page,

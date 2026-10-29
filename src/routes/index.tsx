@@ -198,7 +198,7 @@ function Home() {
       </a>
       <header className="header">
         <a className="brand" href="/" aria-label="Verynize home">
-          <span className="brand-mark">b.</span>verynize
+          <span className="brand-mark">v.</span>verynize
           <span className="alpha">LOCAL FIRST</span>
         </a>
         <button
@@ -237,9 +237,9 @@ function Home() {
             <span>Your next great idea.</span>
           </h1>
           <p>
-            A local design workspace where you shape the pixels
-            <br className="desktop-break" /> and Claude or Codex helps you move
-            the idea forward.
+            Shape your canvas, work on your code, and review the changes.
+            <br className="desktop-break" /> A local macOS workspace with Claude
+            and Codex close at hand.
           </p>
           <div className="hero-actions">
             <a className="button primary" href="#start">
@@ -291,8 +291,9 @@ function Home() {
               <span className="feature-number">01 / THE CANVAS</span>
               <h3>Room to find your direction.</h3>
               <p>
-                Frames, typography, images, and flexible layouts. Shape your
-                composition with snapping, alignment, and the freedom to undo.
+                Start with an empty page and choose its background color. Shape
+                frames, text, images, and ellipses with flexible layouts, drag
+                layers into place, and undo as you explore.
               </p>
             </article>
             <article>
@@ -313,9 +314,9 @@ function Home() {
               <span className="feature-number">02 / YOUR AGENTS</span>
               <h3>A partner for the next move.</h3>
               <p>
-                Bring your selected canvas and project files into explicit
-                tasks. Work with your installed Claude or Codex, with controls
-                to queue and stop.
+                Give Claude or Codex your canvas selection and project context.
+                Follow streaming output, choose an access level, and queue or
+                stop tasks while you stay in control.
               </p>
             </article>
             <article>
@@ -334,9 +335,9 @@ function Home() {
               <span className="feature-number">03 / YOUR WORK</span>
               <h3>Good ideas deserve a home.</h3>
               <p>
-                Save native documents locally. Edit the same format from the
-                desktop, CLI, or MCP, and export your work as HTML, images, or
-                PDF.
+                Save .verynize.json documents locally and edit them from the
+                desktop, CLI, or MCP. Export HTML, images, or PDF, with artwork
+                export scales from 0.5× to 4×.
               </p>
             </article>
           </div>
@@ -350,20 +351,28 @@ function Home() {
           <div className="capabilities">
             {[
               [
-                "Layouts that adapt",
-                "Explore free, flex, grid, and block layouts with Fixed, Hug, and Fill sizing.",
+                "Details that stay consistent",
+                "Pair flexible layouts with color, dimension, number, and font variables. Bind properties and export your tokens as CSS.",
               ],
               [
                 "A little more dimension",
                 "Add gradients, masks, shadows, and independently authored animated WebGL shaders.",
               ],
               [
+                "A workspace for the code, too",
+                "Switch from Design to Code for repository chats, file editing, and project memory. New repository chats get their own Git worktree when the repository has a commit.",
+              ],
+              [
+                "Review before you commit",
+                "Inspect changed files and diffs, then commit or push from the Changes panel. Start an agent task from a selected design to carry the idea into code.",
+              ],
+              [
                 "Your running app, in view",
-                "Preview localhost apps and capture supported visible content into editable canvas layers.",
+                "Start a local dev server, preview responsive layouts, and capture supported content into editable layers. Agent shell actions use access-level approval controls.",
               ],
               [
                 "A bridge to your tools",
-                "Use shared MCP tools to edit the live canvas with undo, or work on saved documents.",
+                "Connect your agent through 49 MCP tools, including 15 desktop-only shell tools. Edit designs, work with saved documents, and operate local project previews.",
               ],
             ].map(([title, text]) => (
               <article key={title}>
@@ -438,7 +447,15 @@ function Home() {
               ],
               [
                 "Do I need an AI subscription?",
-                "Canvas editing works independently of an agent. Agent tasks use your installed Claude or Codex CLI and its existing account. Provider access and any usage charges are managed by that provider. The newer integrated chat runtime still awaits a real model-turn validation.",
+                "Canvas editing works independently of an agent. Agent tasks use your installed Claude or Codex and its existing account; provider access and usage charges are managed by that provider. One real reply-only turn has passed through each integrated runtime, including event streaming and MCP tool discovery. Results on your own coding tasks still depend on the provider and the task.",
+              ],
+              [
+                "How does the Design-to-Code workflow work?",
+                "Switch to Code to work with repository chats, files, and project memory. New chats in repositories with a commit get their own Git worktree; older chats and uncommitted repositories can use the project root. Files, previews, and the agent follow the active chat. Send a canvas selection into an implementation task, then inspect diffs and commit or push from the Changes panel. This is an agent-assisted workflow, not a guaranteed design-to-source round trip. Real GitHub pull-request creation remains unverified.",
+              ],
+              [
+                "Can I revisit a turn or ask another agent to review it?",
+                "Rewind can fork a provider session at a kept turn, with a transcript fallback. Second opinion sends the latest answer and diff to the other provider for read-only review. Both controls are implemented, but neither has been exercised live from inside the app yet.",
               ],
               [
                 "Can I collaborate or publish a website?",
@@ -496,7 +513,7 @@ function Home() {
       </main>
       <footer>
         <a className="brand" href="/">
-          <span className="brand-mark">b.</span>verynize
+          <span className="brand-mark">v.</span>verynize
         </a>
         <span>A little more possibility.</span>
         <Link to="/roadmap">
