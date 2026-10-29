@@ -35,3 +35,9 @@ The product owner confirmed that the Better Design app will always be free. Any 
 ## Repository
 
 This is a Git submodule of `better-design`. Its temporary origin is the sibling bare repository `../better-design-marketing.git` relative to the parent repository. Commit here first, push to the local origin, then commit the updated submodule pointer in the parent.
+
+## Roadmap
+
+`/roadmap` covers the 27 feature directions on [Wonder’s roadmap](https://wonder.design/roadmap), read on 2026-10-29 with Agent Reach/Jina Reader. The implementation and copy are original. Statuses come from our product acceptance notes dated 2026-10-28, not the vendor’s shipped labels.
+
+Edit `src/data/roadmap.ts` to maintain the feature inventory. Available locally means exercised within stated limits; Partial means bounded implementation or pending validation; Exploring is a parity direction with no delivery commitment. Do not promote an item without new product evidence. Preserve the always-free app and self-hosting commitment.

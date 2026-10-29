@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState, useSyncExternalStore } from "react";
 const subscribe = () => () => {};
 function useHydrated() {
@@ -214,6 +214,9 @@ function Home() {
           <a href="#features" onClick={() => setMenu(false)}>
             Features
           </a>
+          <Link to="/roadmap" onClick={() => setMenu(false)}>
+            Roadmap
+          </Link>
           <a href="#questions" onClick={() => setMenu(false)}>
             Good to know
           </a>
@@ -373,14 +376,32 @@ function Home() {
             ))}
           </div>
         </section>
-        <section className="section" id="always-free" aria-labelledby="free-heading">
+        <section className="roadmap-teaser" aria-labelledby="roadmap-title">
+          <div>
+            <span className="eyebrow">THE ROAD AHEAD</span>
+            <h2 id="roadmap-title">See what’s here. And what’s ahead.</h2>
+            <p>
+              Explore the canvas, code, and collaboration roadmap, with a clear
+              status for every direction.
+            </p>
+          </div>
+          <Link className="nav-cta" to="/roadmap">
+            Explore the roadmap <ArrowUpRight size={15} />
+          </Link>
+        </section>
+        <section
+          className="section"
+          id="always-free"
+          aria-labelledby="free-heading"
+        >
           <div className="section-heading">
             <span className="eyebrow">CREATIVITY HAS NO SUBSCRIPTION</span>
             <h2 id="free-heading">The app is free. Always.</h2>
             <p>
               Better Design will always be free to use.
               <br />
-              Any future paid offerings will be limited to optional cloud and AI services.
+              Any future paid offerings will be limited to optional cloud and AI
+              services.
               <br />
               Deploy to your own cloud? Better Design is still free.
             </p>
@@ -478,9 +499,9 @@ function Home() {
           <span className="brand-mark">b.</span>better design
         </a>
         <span>A little more possibility.</span>
-        <a href="#questions">
-          Product status <ArrowUpRight size={13} />
-        </a>
+        <Link to="/roadmap">
+          Roadmap &amp; status <ArrowUpRight size={13} />
+        </Link>
       </footer>
     </>
   );
