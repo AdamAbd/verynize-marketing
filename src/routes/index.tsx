@@ -225,7 +225,7 @@ function Home() {
       <main id="main">
         <section className="hero">
           <div className="release">
-            <span /> A personal design space, with a little more possibility{" "}
+            <span /> Always free. More room for your ideas.{" "}
             <ArrowRight size={13} />
           </div>
           <h1>
@@ -373,6 +373,20 @@ function Home() {
             ))}
           </div>
         </section>
+        <section className="section" id="always-free" aria-labelledby="free-heading">
+          <div className="section-heading">
+            <span className="eyebrow">CREATIVITY HAS NO SUBSCRIPTION</span>
+            <h2 id="free-heading">The app is free. Always.</h2>
+            <p>
+              Better Design will always be free to use.
+              <br />
+              Any future paid offerings will be limited to optional cloud and AI services.
+              <br />
+              Deploy to your own cloud? Better Design is still free.
+            </p>
+            <p>Your hosting and AI providers may charge for their services.</p>
+          </div>
+        </section>
         <section className="section faq" id="questions">
           <div>
             <span className="eyebrow">GOOD TO KNOW</span>
@@ -389,6 +403,14 @@ function Home() {
           </div>
           <div>
             {[
+              [
+                "Will Better Design always be free?",
+                "Yes. The Better Design app will always be free. Any future paid offerings will be limited to optional cloud and AI services. You will not need a paid Better Design plan to use the app.",
+              ],
+              [
+                "Is self-hosting free too?",
+                "Yes. Deploying Better Design to your own cloud remains free, with no Better Design license or subscription fee. You only cover any infrastructure or AI usage charged by your chosen providers. The collaboration service has been tested locally; no production-hosted service is available here yet.",
+              ],
               [
                 "Can I use Better Design today?",
                 "You can run the macOS app from the product source. A locally signed app build has been tested, but there is no notarized public installer available here yet.",
