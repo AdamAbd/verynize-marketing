@@ -6,11 +6,11 @@ import { roadmap, statuses, type RoadmapStatus } from "../data/roadmap";
 export const Route = createFileRoute("/roadmap")({
   head: () => ({
     meta: [
-      { title: "Roadmap — Better Design" },
+      { title: "Roadmap — Verynize" },
       {
         name: "description",
         content:
-          "Explore what works locally in Better Design, what remains partial, and the directions ahead. An always-free design app with transparent progress.",
+          "Explore what works locally in Verynize, what remains partial, and the directions ahead. An always-free design app with transparent progress.",
       },
     ],
   }),
@@ -34,8 +34,8 @@ function RoadmapPage() {
         Skip to content
       </a>
       <header className="header roadmap-header">
-        <Link className="brand" to="/" aria-label="Better Design home">
-          <span className="brand-mark">b.</span>better design
+        <Link className="brand" to="/" aria-label="Verynize home">
+          <span className="brand-mark">b.</span>verynize
           <span className="alpha">LOCAL FIRST</span>
         </Link>
         <nav className="roadmap-nav" aria-label="Main navigation">
@@ -137,7 +137,7 @@ function RoadmapPage() {
           <h2>The app stays free. Always.</h2>
           <p>
             Any future paid offerings are limited to optional cloud and AI
-            services. Self-hosting stays free of Better Design license fees;
+            services. Self-hosting stays free of Verynize license fees;
             your infrastructure and AI providers may charge for usage.
           </p>
           <a className="button primary" href="/#start">
@@ -147,7 +147,7 @@ function RoadmapPage() {
         <aside className="roadmap-evidence">
           <h2>About this roadmap</h2>
           <p>
-            These are Better Design’s own implementation statuses. Available
+            These are Verynize’s own implementation statuses. Available
             locally means tested within the stated scope, not a hosted
             production service. Exploring items have no committed delivery
             dates.
@@ -161,7 +161,7 @@ function RoadmapPage() {
             >
               Wonder roadmap <ArrowUpRight size={12} />
             </a>{" "}
-            and our implementation acceptance notes. Better Design is
+            and our implementation acceptance notes. Verynize is
             independently authored; this page does not claim full Wonder parity
             or affiliation.
           </p>
@@ -169,7 +169,7 @@ function RoadmapPage() {
       </main>
       <footer>
         <Link className="brand" to="/">
-          <span className="brand-mark">b.</span>better design
+          <span className="brand-mark">b.</span>verynize
         </Link>
         <span>A little more possibility.</span>
         <Link to="/">

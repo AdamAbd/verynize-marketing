@@ -182,7 +182,7 @@ function Home() {
   const hydrated = useHydrated();
   const [menu, setMenu] = useState(false);
   const [copied, setCopied] = useState(false);
-  const command = "cd better-design-product\nnpm install\nnpm start";
+  const command = "cd verynize-product\nnpm install\nnpm start";
   async function copy() {
     try {
       await navigator.clipboard.writeText(command);
@@ -197,8 +197,8 @@ function Home() {
         Skip to content
       </a>
       <header className="header">
-        <a className="brand" href="/" aria-label="Better Design home">
-          <span className="brand-mark">b.</span>better design
+        <a className="brand" href="/" aria-label="Verynize home">
+          <span className="brand-mark">b.</span>verynize
           <span className="alpha">LOCAL FIRST</span>
         </a>
         <button
@@ -323,7 +323,7 @@ function Home() {
                 <div className="file-card">
                   <Code2 size={26} />
                   <strong>something-great</strong>
-                  <span>.better-design.json</span>
+                  <span>.verynize.json</span>
                   <div>
                     <span>Canvas</span>
                     <span>CLI</span>
@@ -398,12 +398,12 @@ function Home() {
             <span className="eyebrow">CREATIVITY HAS NO SUBSCRIPTION</span>
             <h2 id="free-heading">The app is free. Always.</h2>
             <p>
-              Better Design will always be free to use.
+              Verynize will always be free to use.
               <br />
               Any future paid offerings will be limited to optional cloud and AI
               services.
               <br />
-              Deploy to your own cloud? Better Design is still free.
+              Deploy to your own cloud? Verynize is still free.
             </p>
             <p>Your hosting and AI providers may charge for their services.</p>
           </div>
@@ -425,15 +425,15 @@ function Home() {
           <div>
             {[
               [
-                "Will Better Design always be free?",
-                "Yes. The Better Design app will always be free. Any future paid offerings will be limited to optional cloud and AI services. You will not need a paid Better Design plan to use the app.",
+                "Will Verynize always be free?",
+                "Yes. The Verynize app will always be free. Any future paid offerings will be limited to optional cloud and AI services. You will not need a paid Verynize plan to use the app.",
               ],
               [
                 "Is self-hosting free too?",
-                "Yes. Deploying Better Design to your own cloud remains free, with no Better Design license or subscription fee. You only cover any infrastructure or AI usage charged by your chosen providers. The collaboration service has been tested locally; no production-hosted service is available here yet.",
+                "Yes. Deploying Verynize to your own cloud remains free, with no Verynize license or subscription fee. You only cover any infrastructure or AI usage charged by your chosen providers. The collaboration service has been tested locally; no production-hosted service is available here yet.",
               ],
               [
-                "Can I use Better Design today?",
+                "Can I use Verynize today?",
                 "You can run the macOS app from the product source. A locally signed app build has been tested, but there is no notarized public installer available here yet.",
               ],
               [
@@ -468,7 +468,7 @@ function Home() {
               for something better.
             </h2>
             <p>
-              Have the Better Design workspace locally?
+              Have the Verynize workspace locally?
               <br />
               Open a terminal at its root and start creating.
             </p>
@@ -489,14 +489,14 @@ function Home() {
             <p role="status">
               {copied
                 ? "Commands copied to clipboard."
-                : "Requires the better-design-product source checkout."}
+                : "Requires the verynize-product source checkout."}
             </p>
           </div>
         </section>
       </main>
       <footer>
         <a className="brand" href="/">
-          <span className="brand-mark">b.</span>better design
+          <span className="brand-mark">b.</span>verynize
         </a>
         <span>A little more possibility.</span>
         <Link to="/roadmap">

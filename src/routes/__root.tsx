@@ -10,7 +10,7 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Better Design — Your canvas. Your agents. Your ideas." },
+      { title: "Verynize — Your canvas. Your agents. Your ideas." },
       {
         name: "description",
         content:
@@ -37,7 +37,7 @@ export const Route = createRootRoute({
   notFoundComponent: () => (
     <main className="section">
       <h1>Nothing on this canvas.</h1>
-      <a href="/">Back to Better Design →</a>
+      <a href="/">Back to Verynize →</a>
     </main>
   ),
 });

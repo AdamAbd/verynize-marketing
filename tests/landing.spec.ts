@@ -37,7 +37,7 @@ test("perspectives, FAQ, and source CTA work without browser errors", async ({
   await page.getByRole("button", { name: "Copy commands" }).click();
   await expect(page.getByRole("button", { name: "Copied!" })).toBeVisible();
   expect(await page.evaluate(() => navigator.clipboard.readText())).toContain(
-    "cd better-design-product",
+    "cd verynize-product",
   );
   expect(errors).toEqual([]);
 });

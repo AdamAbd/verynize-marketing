@@ -6,7 +6,7 @@ test("roadmap is server-rendered with honest status and free-app commitment", as
   const response = await request.get("/roadmap");
   expect(response.status()).toBe(200);
   const html = await response.text();
-  expect(html).toContain("Roadmap — Better Design");
+  expect(html).toContain("Roadmap — Verynize");
   expect(html).toContain("The app stays free. Always.");
   expect(html).toContain("no committed delivery dates");
   expect(html).toContain("https://wonder.design/roadmap");
@@ -21,7 +21,7 @@ test("homepage navigation, status filters, and return navigation work", async ({
   await page.goto("/");
   await page.getByRole("link", { name: "Explore the roadmap" }).click();
   await expect(page).toHaveURL(/\/roadmap$/);
-  await expect(page).toHaveTitle("Roadmap — Better Design");
+  await expect(page).toHaveTitle("Roadmap — Verynize");
   await expect(page.locator(".roadmap-card")).toHaveCount(27);
   await page
     .getByRole("button", { name: "Available locally", exact: true })
