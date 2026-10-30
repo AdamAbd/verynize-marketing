@@ -5,3 +5,16 @@ dist/
 test-results/
 playwright-report/
 .DS_Store
+
+# Credentials and machine-local deployment state
+.env
+.env.*
+!.env.example
+.dev.vars
+.dev.vars.*
+!.dev.vars.example
+*.pem
+*.key
+secrets*.json
+.cloudflare/
+.wrangler/

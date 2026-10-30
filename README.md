@@ -43,3 +43,7 @@ This is the marketing Git submodule of the Verynize workspace. Its configured or
 The current inventory has 33 directions: 13 Available locally, 11 Partial, and 9 Exploring.
 
 Edit `src/data/roadmap.ts` to maintain the feature inventory. Available locally means exercised within stated limits; Partial means bounded implementation or pending validation; Exploring is a parity direction with no delivery commitment. Do not promote an item without new product evidence. Preserve the always-free app and self-hosting commitment.
+
+## License
+
+Original Verynize code and documentation are licensed under the [MIT License](LICENSE). Third-party materials retain their own rights and licenses; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
