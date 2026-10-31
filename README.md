@@ -9,7 +9,7 @@ npm install
 npm run dev
 ```
 
-Open http://localhost:3000. Run `npm run build` for the client and SSR production bundles and `npm run preview` to inspect the build locally. No hosting adapter or production deployment is configured.
+Open http://localhost:3000. The Cloudflare Vite adapter runs SSR in local workerd. `npm run build` writes Workers Build Output to `.cloudflare/output/`; `npm run preview` previews that build locally.
 
 ## Validation
 
@@ -47,3 +47,17 @@ Edit `src/data/roadmap.ts` to maintain the feature inventory. Available locally 
 ## License
 
 Original Verynize code and documentation are licensed under the [MIT License](LICENSE). Third-party materials retain their own rights and licenses; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+
+## Cloudflare deployment
+
+Marketing is deployed independently of the product to https://verynize-marketing.gayaloo.app.
+`cloudflare.config.ts` configures the `verynize-marketing` Worker and its custom domain. The app uses SSR for page routes and Workers assets for static files. No product database, secrets, or cloud-service bindings are needed.
+
+Use a Node version supported by the pinned cf CLI (`^22.23.0`, `^24.22.0`, or `^26.12.0`) and an authenticated cf profile for the account owning the domain:
+
+```sh
+npm run deploy:check  # build and cf prebuilt dry-run
+npm run deploy        # build and cf deploy --prebuilt
+```
+
+Deploying this marketing site does not establish production readiness of the product's collaboration or other hosted features.
