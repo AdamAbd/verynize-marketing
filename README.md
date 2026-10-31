@@ -24,7 +24,7 @@ Tests cover SSR content, perspective switching, FAQ expansion, mobile navigation
 
 ## Content sources
 
-Copy is based on product **0.8.0** at commit `404c83bc9476665b6c88f9cd7405d6cbd8101276`, including `../verynize-product/README.md`, the acceptance notes updated 2026-10-29, and current code/test evidence. See [the product evidence ledger](docs/product-evidence.md) for supported claims, source conflicts, and validation limits. The product workspace is an original CSS illustration, explicitly labeled as illustrative. It is not a screenshot or evidence of a successful agent task.
+Copy is based on product **0.17.0** at commit `e14b81b79aefe7cc94bfb34128670f123d6caba5`, including `../verynize-product/README.md`, the acceptance notes updated 2026-10-31, and current code/test evidence reviewed on 2026-11-01. See [the product evidence ledger](docs/product-evidence.md) for supported claims, source conflicts, and validation limits. The product workspace is an original CSS illustration, explicitly labeled as illustrative. It is not a screenshot or evidence of a successful agent task.
 
 The primary CTA opens source-checkout instructions. No public download, paid plan prices, signup, hosted collaboration, or production service is implied. Review the FAQ alongside the implementation status before changing claims. Product source is not bundled into the website. Fonts are bundled locally with their license.
 
@@ -38,9 +38,9 @@ This is the marketing Git submodule of the Verynize workspace. Its configured or
 
 ## Roadmap
 
-`/roadmap` starts from the feature coverage in [Wonder’s roadmap](https://wonder.design/roadmap), read on 2026-10-29 with Agent Reach/Jina Reader, and tracks Verynize’s own capabilities. The implementation and copy are original. Statuses come from our product acceptance notes dated 2026-10-29 and the product evidence ledger, not the vendor’s shipped labels.
+`/roadmap` starts from the feature coverage in [Wonder’s roadmap](https://wonder.design/roadmap), read on 2026-10-29 with Agent Reach/Jina Reader, and tracks Verynize’s own capabilities. The implementation and copy are original. Statuses come from our product acceptance notes dated 2026-10-31 and the product evidence ledger, not the vendor’s shipped labels.
 
-The current inventory has 33 directions: 13 Available locally, 11 Partial, and 9 Exploring.
+The current inventory has 42 directions: 14 Available locally, 23 Partial, and 5 Exploring. The page derives filter counts from `src/data/roadmap.ts`. Statuses distinguish local implementation, incomplete or live-unverified capabilities, and future directions.
 
 Edit `src/data/roadmap.ts` to maintain the feature inventory. Available locally means exercised within stated limits; Partial means bounded implementation or pending validation; Exploring is a parity direction with no delivery commitment. Do not promote an item without new product evidence. Preserve the always-free app and self-hosting commitment.
 
